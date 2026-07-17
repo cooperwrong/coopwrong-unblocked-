@@ -1,0 +1,56 @@
+[
+  {
+    "id": "snake-local",
+    "title": "Retro Snake",
+    "url": "local-snake",
+    "thumbnail": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=300&auto=format&fit=crop",
+    "description": "Feed the snake and grow as long as possible without running into walls or your own tail. Built-in retro arcade edition!",
+    "category": "Built-in Retro",
+    "tags": ["Local", "Arcade", "Retro"]
+  },
+  {
+    "id": "pacman",
+    "title": "Google Pac-Man",
+    "url": "https://www.google.com/logos/2010/pacman10-i.html",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=300&auto=format&fit=crop",
+    "description": "Play the original arcade classic, Google Pac-Man Doodle Edition! Gobble up dots and avoid the ghosts.",
+    "category": "Web Classic",
+    "tags": ["Arcade", "Classics", "Iframe"]
+  },
+  {
+    "id": "clicker-local",
+    "title": "Neon Space Clicker",
+    "url": "local-clicker",
+    "thumbnail": "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=300&auto=format&fit=crop",
+    "description": "Click the neutron star to generate energy, purchase advanced automated engines, and power up the galaxy.",
+    "category": "Built-in Retro",
+    "tags": ["Local", "Clicker", "Incremental"]
+  },
+  {
+    "id": "tetris-web",
+    "title": "React Tetris",
+    "url": "https://chvin.github.io/react-tetris/",
+    "thumbnail": "https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?q=80&w=300&auto=format&fit=crop",
+    "description": "Drop, rotate, and clear lines in this highly responsive React-based Tetris. Highly compatible and fully featured.",
+    "category": "Web Classic",
+    "tags": ["Puzzle", "Retro", "Iframe"]
+  },
+  {
+    "id": "2048-web",
+    "title": "Classic 2048",
+    "url": "https://scgierth.github.io/2048/",
+    "thumbnail": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=300&auto=format&fit=crop",
+    "description": "Join the numbers together and slide your way to the 2048 tile in this clean, responsive puzzle classic.",
+    "category": "Web Classic",
+    "tags": ["Puzzle", "Maths", "Iframe"]
+  },
+  {
+    "id": "space-local",
+    "title": "Cosmic Lander",
+    "url": "local-lander",
+    "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=300&auto=format&fit=crop",
+    "description": "Navigate your spaceship onto landing pads through hostile zero-gravity cavern systems in this built-in physics landing simulator.",
+    "category": "Built-in Retro",
+    "tags": ["Local", "Physics", "Sci-Fi"]
+  }
+]
