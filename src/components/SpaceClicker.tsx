@@ -25,11 +25,13 @@ export default function SpaceClicker() {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // Map icons back to components
-        return parsed.map((item: any) => ({
-          ...item,
-          icon: getIconForId(item.id),
-        }));
+        if (Array.isArray(parsed)) {
+          // Map icons back to components
+          return parsed.map((item: any) => ({
+            ...item,
+            icon: getIconForId(item.id),
+          }));
+        }
       } catch (e) {
         // Fallback to default
       }

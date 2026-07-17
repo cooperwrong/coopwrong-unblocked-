@@ -27,9 +27,76 @@ import SpaceClicker from './components/SpaceClicker';
 import CosmicLander from './components/CosmicLander';
 import Classic2048 from './components/Classic2048';
 import BrickBreaker from './components/BrickBreaker';
+import ReactTetris from './components/ReactTetris';
+
+const BUILTIN_GAMES: Game[] = [
+  {
+    id: 'snake-local',
+    title: 'Retro Snake',
+    url: 'local-snake',
+    thumbnail: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=300&auto=format&fit=crop',
+    description: 'Feed the snake and grow as long as possible without running into walls or your own tail. Built-in retro arcade edition!',
+    category: 'Built-in Retro',
+    tags: ['Local', 'Arcade', 'Retro']
+  },
+  {
+    id: 'tetris-local',
+    title: 'Neon Tetris',
+    url: 'local-tetris',
+    thumbnail: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=300&auto=format&fit=crop',
+    description: 'Stack falling tetromino blocks perfectly in rows to clear lines and score massive high-score level modifiers. Fully offline and school safe!',
+    category: 'Built-in Retro',
+    tags: ['Local', 'Arcade', 'Retro', 'Puzzle', 'Skill']
+  },
+  {
+    id: '2048-local',
+    title: 'Classic 2048',
+    url: 'local-2048',
+    thumbnail: 'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=300&auto=format&fit=crop',
+    description: 'Join the numbers together and slide your way to the 2048 tile in this clean, high-performance, offline-capable puzzle classic.',
+    category: 'Built-in Retro',
+    tags: ['Puzzle', 'Maths', 'Local', 'Retro']
+  },
+  {
+    id: 'breaker-local',
+    title: 'Neon Breaker',
+    url: 'local-breaker',
+    thumbnail: 'https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?q=80&w=300&auto=format&fit=crop',
+    description: 'Reflect the glowing neutron ball, destroy glowing brick walls, and collect dropping diamond power-ups in this addictive skill game.',
+    category: 'Built-in Retro',
+    tags: ['Physics', 'Arcade', 'Local', 'Retro', 'Skill']
+  },
+  {
+    id: 'clicker-local',
+    title: 'Neon Space Clicker',
+    url: 'local-clicker',
+    thumbnail: 'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=300&auto=format&fit=crop',
+    description: 'Click the neutron star to generate energy, purchase advanced automated engines, and power up the galaxy.',
+    category: 'Built-in Retro',
+    tags: ['Local', 'Clicker', 'Incremental']
+  },
+  {
+    id: 'space-local',
+    title: 'Cosmic Lander',
+    url: 'local-lander',
+    thumbnail: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=300&auto=format&fit=crop',
+    description: 'Navigate your spaceship onto landing pads through hostile zero-gravity cavern systems in this built-in physics landing simulator.',
+    category: 'Built-in Retro',
+    tags: ['Local', 'Physics', 'Sci-Fi']
+  },
+  {
+    id: 'pacman',
+    title: 'Google Pac-Man',
+    url: 'https://www.google.com/logos/2010/pacman10-hp.html',
+    thumbnail: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=300&auto=format&fit=crop',
+    description: 'Play the original arcade classic, Google Pac-Man Doodle Edition! Gobble up dots and avoid the ghosts. Note: If it fails to load, your school router is blocking Google Doodle assets.',
+    category: 'Web Classic',
+    tags: ['Arcade', 'Classics', 'Iframe']
+  }
+];
 
 export default function App() {
-  const [games, setGames] = useState<Game[]>([]);
+  const [games, setGames] = useState<Game[]>(BUILTIN_GAMES);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('Popular');
   const [activeGame, setActiveGame] = useState<Game | null>(null);
@@ -381,6 +448,7 @@ export default function App() {
                 {activeGame.url === 'local-lander' && <CosmicLander />}
                 {activeGame.url === 'local-2048' && <Classic2048 />}
                 {activeGame.url === 'local-breaker' && <BrickBreaker />}
+                {activeGame.url === 'local-tetris' && <ReactTetris />}
 
                 {/* External Iframe Loader */}
                 {activeGame.url.startsWith('http') && (

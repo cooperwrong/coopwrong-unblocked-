@@ -9,6 +9,15 @@
     "tags": ["Local", "Arcade", "Retro"]
   },
   {
+    "id": "tetris-local",
+    "title": "Neon Tetris",
+    "url": "local-tetris",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=300&auto=format&fit=crop",
+    "description": "Stack falling tetromino blocks perfectly in rows to clear lines and score massive high-score level modifiers. Fully offline and school safe!",
+    "category": "Built-in Retro",
+    "tags": ["Local", "Arcade", "Retro", "Puzzle", "Skill"]
+  },
+  {
     "id": "2048-local",
     "title": "Classic 2048",
     "url": "local-2048",
