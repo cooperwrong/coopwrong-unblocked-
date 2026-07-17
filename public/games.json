@@ -9,13 +9,22 @@
     "tags": ["Local", "Arcade", "Retro"]
   },
   {
-    "id": "pacman",
-    "title": "Google Pac-Man",
-    "url": "https://www.google.com/logos/2010/pacman10-i.html",
-    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=300&auto=format&fit=crop",
-    "description": "Play the original arcade classic, Google Pac-Man Doodle Edition! Gobble up dots and avoid the ghosts.",
-    "category": "Web Classic",
-    "tags": ["Arcade", "Classics", "Iframe"]
+    "id": "2048-local",
+    "title": "Classic 2048",
+    "url": "local-2048",
+    "thumbnail": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=300&auto=format&fit=crop",
+    "description": "Join the numbers together and slide your way to the 2048 tile in this clean, high-performance, offline-capable puzzle classic.",
+    "category": "Built-in Retro",
+    "tags": ["Puzzle", "Maths", "Local", "Retro"]
+  },
+  {
+    "id": "breaker-local",
+    "title": "Neon Breaker",
+    "url": "local-breaker",
+    "thumbnail": "https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?q=80&w=300&auto=format&fit=crop",
+    "description": "Reflect the glowing neutron ball, destroy glowing brick walls, and collect dropping diamond power-ups in this addictive skill game.",
+    "category": "Built-in Retro",
+    "tags": ["Physics", "Arcade", "Local", "Retro", "Skill"]
   },
   {
     "id": "clicker-local",
@@ -27,24 +36,6 @@
     "tags": ["Local", "Clicker", "Incremental"]
   },
   {
-    "id": "tetris-web",
-    "title": "React Tetris",
-    "url": "https://chvin.github.io/react-tetris/",
-    "thumbnail": "https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?q=80&w=300&auto=format&fit=crop",
-    "description": "Drop, rotate, and clear lines in this highly responsive React-based Tetris. Highly compatible and fully featured.",
-    "category": "Web Classic",
-    "tags": ["Puzzle", "Retro", "Iframe"]
-  },
-  {
-    "id": "2048-web",
-    "title": "Classic 2048",
-    "url": "https://scgierth.github.io/2048/",
-    "thumbnail": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=300&auto=format&fit=crop",
-    "description": "Join the numbers together and slide your way to the 2048 tile in this clean, responsive puzzle classic.",
-    "category": "Web Classic",
-    "tags": ["Puzzle", "Maths", "Iframe"]
-  },
-  {
     "id": "space-local",
     "title": "Cosmic Lander",
     "url": "local-lander",
@@ -52,5 +43,14 @@
     "description": "Navigate your spaceship onto landing pads through hostile zero-gravity cavern systems in this built-in physics landing simulator.",
     "category": "Built-in Retro",
     "tags": ["Local", "Physics", "Sci-Fi"]
+  },
+  {
+    "id": "pacman",
+    "title": "Google Pac-Man",
+    "url": "https://www.google.com/logos/2010/pacman10-hp.html",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=300&auto=format&fit=crop",
+    "description": "Play the original arcade classic, Google Pac-Man Doodle Edition! Gobble up dots and avoid the ghosts. Note: If it fails to load, your school router is blocking Google Doodle assets.",
+    "category": "Web Classic",
+    "tags": ["Arcade", "Classics", "Iframe"]
   }
 ]

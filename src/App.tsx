@@ -25,6 +25,8 @@ import { developerCode } from './developerCode';
 import RetroSnake from './components/RetroSnake';
 import SpaceClicker from './components/SpaceClicker';
 import CosmicLander from './components/CosmicLander';
+import Classic2048 from './components/Classic2048';
+import BrickBreaker from './components/BrickBreaker';
 
 export default function App() {
   const [games, setGames] = useState<Game[]>([]);
@@ -52,7 +54,7 @@ export default function App() {
   useEffect(() => {
     async function loadGames() {
       try {
-        const response = await fetch('/games.json');
+        const response = await fetch('games.json');
         if (response.ok) {
           const data = await response.json();
           setGames(data);
@@ -377,6 +379,8 @@ export default function App() {
                 {activeGame.url === 'local-snake' && <RetroSnake />}
                 {activeGame.url === 'local-clicker' && <SpaceClicker />}
                 {activeGame.url === 'local-lander' && <CosmicLander />}
+                {activeGame.url === 'local-2048' && <Classic2048 />}
+                {activeGame.url === 'local-breaker' && <BrickBreaker />}
 
                 {/* External Iframe Loader */}
                 {activeGame.url.startsWith('http') && (
