@@ -122,26 +122,57 @@ const gamePlayer = document.getElementById('game-player');
 const gameIframe = document.getElementById('game-iframe');
 const backBtn = document.getElementById('back-btn');
 
-// Load games from JSON file
+// High-quality fallback games if games.json fails to load or runs into CORS blocks
+const defaultGames = [
+    {
+        "title": "Snake",
+        "url": "https://www.google.com/logos/2010/pacman10-i.html",
+        "thumbnail": "https://images.unsplash.com/photo-1628277613967-6abca504d0ac?q=80&w=300&auto=format&fit=crop"
+    },
+    {
+        "title": "2048",
+        "url": "https://play2048.co/",
+        "thumbnail": "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?q=80&w=300&auto=format&fit=crop"
+    },
+    {
+        "title": "Doodle Jump",
+        "url": "https://doodlejump.io/",
+        "thumbnail": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=300&auto=format&fit=crop"
+    }
+];
+
+// Load games from JSON file with smart fallbacks
 async function loadGames() {
+    let games = defaultGames;
     try {
         const response = await fetch('games.json');
-        const games = await response.json();
-        
-        games.forEach(game => {
-            const card = document.createElement('div');
-            card.className = 'game-card';
-            card.innerHTML = \`
-                <img src="\${game.thumbnail}" alt="\&{game.title}">
-                <h3>\${game.title}</h3>
-            \`;
-            
-            card.onclick = () => playGame(game.url);
-            gameGrid.appendChild(card);
-        });
+        if (response.ok) {
+            games = await response.json();
+            console.log("Successfully loaded games from games.json");
+        } else {
+            console.warn("Could not load games.json, using high-quality local fallback games.");
+        }
     } catch (error) {
-        console.error("Error loading games:", error);
+        console.warn("CORS/Fetch error reading games.json, using fallback games instead:", error);
     }
+    
+    renderGames(games);
+}
+
+// Render the games list inside the grid
+function renderGames(gamesList) {
+    gameGrid.innerHTML = '';
+    gamesList.forEach(game => {
+        const card = document.createElement('div');
+        card.className = 'game-card';
+        card.innerHTML = \`
+            <img src="\${game.thumbnail}" alt="\${game.title}" onerror="this.src='https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=300&auto=format&fit=crop'">
+            <h3>\${game.title}</h3>
+        \`;
+        
+        card.onclick = () => playGame(game.url);
+        gameGrid.appendChild(card);
+    });
 }
 
 // Function to switch to game view
